@@ -18,21 +18,21 @@ segmentation of his/hers photomicrographs.
 **Please cite:**
 
 1. de Siqueira, A.F. et al. Jansen-MIDAS: a multi-level photomicrograph
-segmentation software based on isotropic undecimated wavelets, 2016.
+segmentation software based on isotropic undecimated wavelets, 2016. [(arXiv)](http://www.arxiv.org/abs/1604.05921)
 
 2. de Siqueira, A.F. et al. Estimating the concentration of gold
 nanoparticles incorporated on Natural Rubber membranes using Multi-Level
 Starlet Optimal Segmentation. Journal of Nanoparticle Research, 2014,
-16; 2809. doi: 10.1007/s11051-014-2809-0.
+16; 2809. doi: [10.1007/s11051-014-2809-0](http://dx.doi.org/10.1007/s11051-014-2809-0).
 
 3. de Siqueira, A.F. et al. An automatic method for segmentation
 of fission tracks in epidote crystal photomicrographs. Computers and
-Geosciences, 2014, 69; 55-61. doi: 10.1016/j.cageo.2014.04.008.
+Geosciences, 2014, 69; 55-61. doi: [10.1016/j.cageo.2014.04.008](http://dx.doi.org/10.1016/j.cageo.2014.04.008).
 
 4. de Siqueira, A.F. et al. Segmentation of scanning electron
 microscopy images from natural rubber samples with gold nanoparticles
 using starlet wavelets. Microscopy Research and Technique, 2014, 77(1);
-71-78. doi: 10.1002/jemt.22314.
+71-78. doi: [10.1002/jemt.22314](http://dx.doi.org/10.1002/jemt.22314).
 
 Jansen-MIDAS is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
