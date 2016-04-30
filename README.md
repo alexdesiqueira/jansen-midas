@@ -27,7 +27,7 @@ Starlet Optimal Segmentation. Journal of Nanoparticle Research, 2014,
 
 3. de Siqueira, A.F. et al. An automatic method for segmentation
 of fission tracks in epidote crystal photomicrographs. Computers and
-Geosciences, 2014, 69; 55-61. doi: [10.1016/j.cageo.2014.04.008](http://dx.doi.org/10.1016/j.cageo.2014.04.008).
+Geosciences, 2014, 69; 55-61. doi: [10.1016/j.cageo.2014.04.008](http://dx.doi.org/10.1016/j.cageo.2014.04.008). [(arXiv)](http://www.arxiv.org/abs/1602.03995)
 
 4. de Siqueira, A.F. et al. Segmentation of scanning electron
 microscopy images from natural rubber samples with gold nanoparticles
