@@ -58,7 +58,7 @@
 %% along with this program.  If not, see <http://www.gnu.org/licenses/>.
 %%
 
-function [D,R] = mlss(IMG,initL,L)
+function [D,R] = mlss(IMG,initL,L,ALGchoice)
 
 %%% PREALLOCATING VARS %%%
 [M,N] = size(IMG); % info
@@ -67,10 +67,7 @@ R = zeros(M,N,L);
 %%% STARLET APPLICATION %%%
 [~,D] = starlet(IMG,L);
 
-%%% CHOOSING MLSS ALGORITHM %%%
-ALGchoice = input('Type V for Variant or any to Original MLSS: ','s');
-
-if ((ALGchoice == 'v') || (ALGchoice == 'V')) %% apply Derivative algorithm
+if ALGchoice == 1 %% apply Derivative algorithm
     for i = initL:L
         aux = mlssvaraux(IMG,D(:,:,[1:i]),initL); %% segmentation
         R(:,:,i) = ~binarize(aux); %% binarize input image
