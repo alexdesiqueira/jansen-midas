@@ -4,16 +4,21 @@
 %% multi-level photomicrograph segmentation software based on isotropic
 %% undecimated wavelets'.
 %%
+%%  Jansen-MIDAS is a software developed to provide Multi-Level Starlet
+%% Segmentation (MLSS) and Multi-Level Starlet Optimal Segmentation
+%% (MLSOS) techniques. These methods are based on the starlet transform,
+%% an isotropic undecimated wavelet, in order to determine the location
+%% of objects in photomicrographs. Using Jansen-MIDAS, a scientist can
+%% obtain a multi-level threshold segmentation of his/hers
+%% photomicrographs.
+%%
 %%  Author:
 %% Alexandre Fioravante de Siqueira, siqueiraaf@gmail.com
 %%
-%%  Description: Jansen-MIDAS is a software developed to provide
-%% Multi-Level Starlet Segmentation (MLSS) and Multi-Level Starlet
-%% Optimal Segmentation (MLSOS) techniques. These methods are based on
-%% the starlet transform, an isotropic undecimated wavelet, in order to
-%% determine the location of objects in photomicrographs.
-%% Using Jansen-MIDAS, a scientist can obtain a multi-level threshold
-%% segmentation of his/hers photomicrographs.
+%%  Description: MLSSORIGAUX applies the original MLSS algorithm on the
+%% input image IMG, from the initial level initL, using the wavelet
+%% detail coefficients D. It returns R, the multi-level segmentation
+%% correspondent to D.
 %%
 %%  Input: IMG, a gray input image.
 %%         D, starlet detail levels.

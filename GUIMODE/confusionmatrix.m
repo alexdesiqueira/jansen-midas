@@ -4,22 +4,26 @@
 %% multi-level photomicrograph segmentation software based on isotropic
 %% undecimated wavelets'.
 %%
+%%  Jansen-MIDAS is a software developed to provide Multi-Level Starlet
+%% Segmentation (MLSS) and Multi-Level Starlet Optimal Segmentation
+%% (MLSOS) techniques. These methods are based on the starlet transform,
+%% an isotropic undecimated wavelet, in order to determine the location
+%% of objects in photomicrographs. Using Jansen-MIDAS, a scientist can
+%% obtain a multi-level threshold segmentation of his/hers
+%% photomicrographs.
+%%
 %%  Author:
 %% Alexandre Fioravante de Siqueira, siqueiraaf@gmail.com
 %%
-%%  Description: Jansen-MIDAS is a software developed to provide
-%% Multi-Level Starlet Segmentation (MLSS) and Multi-Level Starlet
-%% Optimal Segmentation (MLSOS) techniques. These methods are based on
-%% the starlet transform, an isotropic undecimated wavelet, in order to
-%% determine the location of objects in photomicrographs.
-%% Using Jansen-MIDAS, a scientist can obtain a multi-level threshold
-%% segmentation of his/hers photomicrographs.
+%%  Description: CONFUSIONMATRIX uses the binary image BIN and the ground
+%% truth IMGGT to generate the confusion matrix CFPixel and the
+%% color-pixel comparison between BIN and IMGGT, COMP.
 %%
-%%  Input: IMG, a gray input image.
+%%  Input: BIN, a binary image.
 %%         IMGGT, the ground truth corresponding to IMG.
 %%
 %%  Output: CFPixel, quantities of TP, TN, FP, and FN.
-%%          COMP, a color comparison between IMG and IMGGT.
+%%          COMP, a color comparison between BIN and IMGGT.
 %%
 %%  Other files required: jansenmidas.m, binarize.m, mattewscc.m, mlsos.m,
 %% mlss.m, mlssorigaux.m, mlssvaraux.m, starlet.m, twodimfilt.m
@@ -56,7 +60,7 @@
 %% along with this program.  If not, see <http://www.gnu.org/licenses/>.
 %%
 
-function [CFPixel,COMP] = confusionmatrix(IMG,IMGGT)
+function [CFPixel,COMP] = confusionmatrix(BIN,IMGGT)
 
 %%% PRELIMINAR VARS AND PIXEL QUANTITY %%%
 [M,N] = size(IMGGT);
@@ -66,13 +70,13 @@ COMP = zeros(M,N,3);
 
 for i = 1:M
     for j = 1:N
-        if ((IMGGT(i,j) == 0) && (IMG(i,j) ~= 0)) %% False Positive pixel
+        if ((IMGGT(i,j) == 0) && (BIN(i,j) ~= 0)) %% False Positive pixel
             CFMatrix(i,j,1) = 255;
             CFPixel(1) = CFPixel(1) +1;
-        elseif ((IMGGT(i,j) ~= 0) && (IMG(i,j) ~= 0)) %% True Positive pixel
+        elseif ((IMGGT(i,j) ~= 0) && (BIN(i,j) ~= 0)) %% True Positive pixel
             CFMatrix(i,j,2) = 255;
             CFPixel(2) = CFPixel(2) +1;
-        elseif ((IMGGT(i,j) ~= 0) && (IMG(i,j) == 0)) %% False Negative pixel
+        elseif ((IMGGT(i,j) ~= 0) && (BIN(i,j) == 0)) %% False Negative pixel
             CFMatrix(i,j,3) = 255;
             CFPixel(3) = CFPixel(3) +1;
         else %% True Negative pixel
